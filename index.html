@@ -29,14 +29,15 @@
     --fg-faint: #748cab;    /* Muted steel blue for less important text */
     
     /* Accents */
-    --gold: #d4af37; 
-    --gold-bright: #e8c85a; 
+    --gold: #fdad00; 
+    --gold-bright: #fdad00;
     --copper: #b87333; 
     --plastic: #3f2020;
 
     /* Layout & Structural Elements */
     --trace: #003c4e;       /* Subtle dark track color */
     --border: #006a8a;      /* Cool navy/slate border */
+    --link-color: #e8c85a; 
     
     /* Semantic Status Indicators */
     --good: #64dfdf;        /* Cool mint/cyan for dark mode harmony */
@@ -60,9 +61,12 @@
       --bg-card: #ffffff; 
       --fg: #17281f; 
       --fg-dim: #4a5e50; 
-      --fg-faint: #83988a; 
+      --fg-faint: #5a685e; 
       --trace: #e2ddc9; 
       --border: #d8d2bd; 
+      --link-color: #fd8f00; 
+      --trace: #ecaf08; 
+      --good: #fdad00;  
     } 
   } 
 
@@ -72,9 +76,12 @@
     --bg-card: #ffffff; 
     --fg: #17281f; 
     --fg-dim: #4a5e50; 
-    --fg-faint: #83988a; 
+    --fg-faint: #5a685e; 
     --trace: #e2ddc9; 
     --border: #d8d2bd; 
+    --link-color: #fd8f00; 
+    --trace: #ecaf08; 
+    --good: #fdad00;  
   }
 
   * { box-sizing: border-box; }
@@ -92,7 +99,7 @@
     margin: 0 auto;
     padding: 0 24px 120px;
   }
-  a { color: var(--gold-bright); }
+  a { color: var(--link-color); }
 
   /* ---------- Header / hero ---------- */
   header.hero {
@@ -179,7 +186,7 @@
   .photo-frame {
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: var(--bg-card);
+    background: var(--bg);
     overflow: hidden;
     position: relative;
     min-height: 200px;
@@ -210,6 +217,7 @@
   }
   .lightbox-overlay.hidden { display: none; }
   .lightbox-overlay img {
+    background: var(--bg);
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -470,9 +478,9 @@
 
   <header class="hero">
     <p class="kicker">BITS UND BOLTS <span class="dot">·</span> HARDWARE PROTOTYPE <span class="dot">·</span> NOT YET IN PRODUCTION</p>
-<h1 class="title" style="display: inline-flex; align-items: center; gap: 0.3em; margin: 0;">
+<h1 class="title" style="display: flex; align-items: center; margin: 0; width: 100%;">
     HAWK 370 
-    <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; height: 1em; text-decoration: none;">
+    <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; height: 1em; text-decoration: none; margin-left: auto;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 0.85em; width: auto; fill: #FF0000;">
             <!-- Red Background Layer -->
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
@@ -486,6 +494,15 @@
     <p class="sub">A Slot 1 to Socket 370 adapter built to run every Socket 370 processor on one board - Mendocino, Coppermine, Tualatin, and VIA C3. Hard gold edge connector. Tested to 155 MHz FSB.</p>
     <p class="sub" style="margin-top: 12px;">Not just a render - it's already running on camera. <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer">Watch the full build &amp; test video →</a> (and see what other retro builders are saying in the comments)</p>
   </header>
+
+  <section id="photo">
+    <h2>what you'd actually get</h2> 
+    <div class="photo-frame"> 
+      <img src="hawk370.webp" alt="HAWK 370 slotket adapter, final look" id="productPhoto" onerror="this.closest('.photo-frame').classList.add('photo-missing')">
+      <div class="photo-placeholder">Drop <code>hawk370.webp</code> next to this file to show it here.</div> 
+    </div>
+    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Unfortunately, the color isn't customizable. Revision 1.5 offers mounting holes, spot for ESP32-C3 to wirelessly control CPU Throttle (optional), and 2.1V+ voltage unlock (optional).</p>
+  </section>
 
   <section id="specs">
     <h2>what it is</h2>
@@ -508,15 +525,6 @@
       <div class="spec"><dt>Requirements for Tualatin/VIA C3</dt><dd>MB VRM 1.5V and compatible BIOS</dd></div>
       <div class="spec"><dt>WARNING</dt><dd>HAWK 370 does not have a VRM</dd></div>
     </dl>
-  </section>
-
-  <section id="photo">
-    <h2>what you'd actually get</h2> 
-    <div class="photo-frame"> 
-      <img src="hawk370.webp" alt="HAWK 370 slotket adapter, final look" id="productPhoto" onerror="this.closest('.photo-frame').classList.add('photo-missing')">
-      <div class="photo-placeholder">Drop <code>hawk370.webp</code> next to this file to show it here.</div> 
-    </div>
-    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Unfortunately, the color isn't customizable. Revision 1.5 offers mounting holes, spot for ESP32-C3 to wirelessly control CPU Throttle (optional), and 2.1V+ voltage unlock (optional).</p>
   </section>
 
   <section id="throttle">
