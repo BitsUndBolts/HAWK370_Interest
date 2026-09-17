@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HAWK 370 - Reserve Your Interest</title>
+<meta name="description" content="A Slot 1 to Socket 370 adapter built to run every Socket 370 processor on one board - Mendocino, Coppermine, Tualatin, and VIA C3. Hard gold edge connector, tested to 155 MHz FSB.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HAWK 370 - The slotket that finally does it all">
+<meta property="og:description" content="One Slot 1 to Socket 370 adapter for Mendocino, Coppermine, Tualatin, and VIA C3. Hard gold edge connector, tested to 155 MHz FSB. This page is demand-testing only - no orders taken here.">
+<meta property="og:image" content="hawk370.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HAWK 370 - The slotket that finally does it all">
+<meta name="twitter:description" content="One Slot 1 to Socket 370 adapter for Mendocino, Coppermine, Tualatin, and VIA C3. Tested to 155 MHz FSB.">
+<meta name="twitter:image" content="hawk370.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -464,7 +473,7 @@
 <h1 class="title" style="display: inline-flex; align-items: center; gap: 0.3em; margin: 0;">
     HAWK 370 
     <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; height: 1em; text-decoration: none;">
-        <svg xmlns="http://w3.org" viewBox="0 0 24 24" style="height: 0.85em; width: auto; fill: #FF0000;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 0.85em; width: auto; fill: #FF0000;">
             <!-- Red Background Layer -->
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
             <!-- White Inner Triangle -->
@@ -475,13 +484,23 @@
 
     <p class="title" style="font-size: clamp(18px, 3vw, 22px); color: var(--fg-dim); font-style: italic; font-weight: 400;">The slotket that finally does it all.</p>
     <p class="sub">A Slot 1 to Socket 370 adapter built to run every Socket 370 processor on one board - Mendocino, Coppermine, Tualatin, and VIA C3. Hard gold edge connector. Tested to 155 MHz FSB.</p>
+    <p class="sub" style="margin-top: 12px;">Not just a render - it's already running on camera. <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer">Watch the full build &amp; test video →</a> (and see what other retro builders are saying in the comments)</p>
   </header>
 
   <section id="specs">
     <h2>what it is</h2>
+
+    <div class="panel" style="margin-bottom: 22px; padding: 20px 22px;">
+      <p style="font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.03em; color: var(--fg-faint); margin: 0 0 12px;">CPU SUPPORT - THE WHOLE SOCKET 370 LINEUP, ONE BOARD</p>
+      <p style="margin: 0 0 14px; font-size: 17px; line-height: 1.5;">
+        <strong>Mendocino</strong> &nbsp;·&nbsp; <strong>Coppermine</strong> &nbsp;·&nbsp; <strong>Tualatin</strong> &nbsp;·&nbsp; <strong>VIA C3</strong>
+      </p>
+      <p class="fineprint" style="margin: 0;">
+        <strong>SMP (dual-CPU) capable</strong> <br />Mendocino, Coppermine Pentium III, and Tualatin (Pentium III-S) only <br />- for CPUs that support it.
+      </p>
+    </div>
+
     <dl class="specs">
-      <div class="spec"><dt>CPU support</dt><dd>Mendocino, Coppermine, Tualatin, VIA C3</dd></div>
-      <div class="spec"><dt>SMT capable</dt><dd>Yes, for CPUs that support it</dd></div>
       <div class="spec"><dt>Premium Gold Connector</dt><dd>Hard gold plated (10 - 15µ)</dd></div>
       <div class="spec"><dt>Tested FSB</dt><dd>155 MHz (MSI BX Master)</dd></div>
       <div class="spec"><dt>Socket</dt><dd>ZIF 370 (new)</dd></div>
@@ -497,12 +516,12 @@
       <img src="hawk370.webp" alt="HAWK 370 slotket adapter, final look" id="productPhoto" onerror="this.closest('.photo-frame').classList.add('photo-missing')">
       <div class="photo-placeholder">Drop <code>hawk370.webp</code> next to this file to show it here.</div> 
     </div>
-    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Unfortunately, the color isn't customizable. Revision 1.5 offers mounting holes, ESP32 wireless CPU Throttle, and optional 2.1V or higher voltage unlock.</p>
+    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Unfortunately, the color isn't customizable. Revision 1.5 offers mounting holes, spot for ESP32-C3 to wirelessly control CPU Throttle (optional), and 2.1V+ voltage unlock (optional).</p>
   </section>
 
   <section id="throttle">
     <h2>optional: throttle control &amp; live monitoring</h2>
-    <p class="lede">HAWK 370 has reserved footprints for an ESP32-C3, so you can add software CPU throttling and live rail monitoring later - no separate adapter needed.</p>
+    <p class="lede">HAWK 370 has reserved footprints for an ESP32-C3, so you can add software CPU throttling and live rail monitoring later.</p>
     <dl class="specs">
       <div class="spec"><dt>CPU throttle control</dt><dd>Adjusts effective CPU speed via STPCLK, from software</dd></div>
       <div class="spec"><dt>Live rail monitoring</dt><dd>Real-time VCORE and VTT readouts</dd></div>
@@ -511,39 +530,39 @@
       <div class="spec"><dt>Firmware status</dt><dd>Early - v0.1, under development</dd></div>
       <div class="spec"><dt>ESP32-C3 module</dt><dd>Not included - solder-on footprint only</dd></div>
     </dl>
-    <p class="fineprint" style="margin-top: 16px;">This is an optional upgrade, not part of the base adapter or the pricing below. HAWK 370 works as a normal slotket with nothing populated on those pads; the ESP32-C3 itself isn't included.</p>
+    <p class="fineprint" style="margin-top: 16px;">This is an optional upgrade, not part of the base adapter or the pricing below. The HAWK 370 works as a normal slotket with nothing populated on those pads; the ESP32-C3 itself isn't included.</p>
   </section>
 
   <section id="pricing">
     <h2>if this shipped</h2>
     <p class="lede">Here's the plan: fully assembled adapters, sold in bundles or individually, through PCBWay Bazaar.
-      <br />No kits - customs and import rules made that difficult for us. 
-      <br />This is what the pricing would look like.
+      <br />No kits (sadly) - customs and import rules made that difficult for us. However, we might be able to offer just the PCB.
+      <br /><br />This is what the pricing would look like.
   </p>
 
     <div class="bundles" id="bundles">
-      <button class="bundle" data-qty="1" data-total="145">
+      <button class="bundle" data-qty="1" data-total="135">
         <div class="count">1×</div>
-        <div class="price">$145</div>
+        <div class="price">$135</div>
         <div class="per">per adapter</div>
         <div class="save">&nbsp;</div>
       </button>
-      <button class="bundle" data-qty="2" data-total="270">
+      <button class="bundle" data-qty="2" data-total="250">
         <div class="count">2×</div>
-        <div class="price">$135</div>
-        <div class="per">per adapter · $270 total</div>
+        <div class="price">$125</div>
+        <div class="per">per adapter · $250 total</div>
         <div class="save">save $20</div>
       </button>
-      <button class="bundle" data-qty="4" data-total="500">
+      <button class="bundle" data-qty="4" data-total="480">
         <div class="count">4×</div>
-        <div class="price">$125</div>
-        <div class="per">per adapter · $500 total</div>
-        <div class="save">save $80</div>
+        <div class="price">$120</div>
+        <div class="per">per adapter · $480 total</div>
+        <div class="save">save $60</div>
       </button>
     </div>
 
     <p class="fineprint">
-      <strong>Not included above:</strong> shipping, and any VAT, customs duty, or import tariff your country charges on arrival. Those extra charges are added on top and vary by destination - PCBWay Bazaar calculates and shows them at actual checkout, once this is real.
+      <strong>Not included above:</strong> shipping, and any VAT, customs duty, or import tariff your country charges on arrival. Those extra charges are added on top and vary by destination - PCBWay Bazaar calculates and shows them at checkout when applicable, once this is real.
     </p>
   </section>
 
@@ -559,7 +578,7 @@
         </div>
         <div class="summary-row">
           <span class="label">Price per adapter</span>
-          <span class="value" id="sumPer">$145.00</span>
+          <span class="value" id="sumPer">$135.00</span>
         </div>
         <div class="summary-row">
           <span class="label">Shipping</span>
@@ -571,7 +590,7 @@
         </div>
         <div class="summary-row total">
           <span class="label">Adapter subtotal</span>
-          <span class="value" id="sumTotal">$145.00</span>
+          <span class="value" id="sumTotal">$135.00</span>
         </div>
 
         <div class="cta-row">
@@ -612,7 +631,7 @@
           </div>
 
           <label class="field-label" for="feedback">anything else on your mind</label>
-          <textarea id="feedback" placeholder="This goes straight to me, not a public comment section - tell me what would actually change your mind, or what's still nagging at you."></textarea>
+          <textarea id="feedback" placeholder="This goes straight to me, not a public comment section - tell me what would actually change your mind, or what's still nagging at you. (Need more than 4? Say so here and how many.)"></textarea>
 
           <label class="field-label" for="notifyEmail">email, if you want to hear when this is real (optional)</label>
           <input type="email" id="notifyEmail" placeholder="you@example.com">
@@ -658,7 +677,7 @@
   const sumPer = document.getElementById('sumPer');
   const sumTotal = document.getElementById('sumTotal');
 
-  let selected = { qty: 1, total: 145, per: 145 };
+  let selected = { qty: 1, total: 135, per: 135 };
 
   function renderSummary() {
     sumBundle.textContent = selected.qty + ' × HAWK 370';
