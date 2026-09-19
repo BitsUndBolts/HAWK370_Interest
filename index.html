@@ -493,6 +493,7 @@
     <p class="title" style="font-size: clamp(18px, 3vw, 22px); color: var(--fg-dim); font-style: italic; font-weight: 400;">The slotket that finally does it all.</p>
     <p class="sub">A Slot 1 to Socket 370 adapter built to run every Socket 370 processor on one board - Mendocino, Coppermine, Tualatin, and VIA C3. Hard gold edge connector. Tested to 155 MHz FSB.</p>
     <p class="sub" style="margin-top: 12px;">Not just a render - it's already running on camera. <a href="https://youtu.be/uJ1uJoefGl0" target="_blank" rel="noopener noreferrer">Watch the full build &amp; test video →</a> (and see what other retro builders are saying in the comments)</p>
+    <p class="sub" style="margin-top: 12px;">The prices on this page are rough estimates calculated using current information and include a safety margin. If these prices change, they will very likely get cheaper. The final price also heavily depends on the interest I receive.</p>
   </header>
 
   <section id="photo">
@@ -501,7 +502,7 @@
       <img src="hawk370.webp" alt="HAWK 370 slotket adapter, final look" id="productPhoto" onerror="this.closest('.photo-frame').classList.add('photo-missing')">
       <div class="photo-placeholder">Drop <code>hawk370.webp</code> next to this file to show it here.</div> 
     </div>
-    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Unfortunately, the color isn't customizable. Revision 1.5 offers mounting holes, spot for ESP32-C3 to wirelessly control CPU Throttle (optional), and 2.1V+ voltage unlock (optional).</p>
+    <p class="fineprint" style="margin-top: 12px;">This (Revision 1.2) is more or less the final look - matte black with white silk screen. Revision 1.5 offers mounting holes, a spot for an ESP32-C3 SuperMini to wirelessly control CPU Throttle (optional), and 2.1V+ voltage unlock (optional).</p>
   </section>
 
   <section id="specs">
@@ -513,14 +514,16 @@
         <strong>Mendocino</strong> &nbsp;·&nbsp; <strong>Coppermine</strong> &nbsp;·&nbsp; <strong>Tualatin</strong> &nbsp;·&nbsp; <strong>VIA C3</strong>
       </p>
       <p class="fineprint" style="margin: 0;">
-        <strong>SMP (dual-CPU) capable</strong> <br />Mendocino, Coppermine Pentium III, and Tualatin (Pentium III-S) only <br />- for CPUs that support it.
+        <strong>SMP (dual-CPU) capable</strong> <br />
+        SMP operation is only supported by Mendocino, Coppermine Pentium III, and Tualatin Pentium III-S processors. VIA processors and Celeron models released after Mendocino do not support SMP. 
+        <br /><u><b>IMPORTANT:</b></u> Some Tualatin Pentium III chips (non-S versions) also lack SMP support!
       </p>
     </div>
 
     <dl class="specs">
-      <div class="spec"><dt>Premium Gold Connector</dt><dd>Hard gold plated (10 - 15µ)</dd></div>
+      <div class="spec"><dt>Premium Gold Connector</dt><dd>Hard gold plated edge connector</dd></div>
       <div class="spec"><dt>Tested FSB</dt><dd>155 MHz (MSI BX Master)</dd></div>
-      <div class="spec"><dt>Socket</dt><dd>ZIF 370 (new)</dd></div>
+      <div class="spec"><dt>Socket</dt><dd>ZIF Socket 370 (new)</dd></div>
       <div class="spec"><dt>Status</dt><dd>Final prototype in verification</dd></div>
       <div class="spec"><dt>Requirements for Tualatin/VIA C3</dt><dd>MB VRM 1.5V and compatible BIOS</dd></div>
       <div class="spec"><dt>WARNING</dt><dd>HAWK 370 does not have a VRM</dd></div>
@@ -544,25 +547,25 @@
   <section id="pricing">
     <h2>if this shipped</h2>
     <p class="lede">Here's the plan: fully assembled adapters, sold in bundles or individually, through PCBWay Bazaar.
-      <br />No kits (sadly) - customs and import rules made that difficult for us. However, we might be able to offer just the PCB.
+      <br />No kits (sadly) - customs and import rules made that difficult for us. <br />However, I might be able to offer just the PCB.
       <br /><br />This is what the pricing would look like.
   </p>
 
     <div class="bundles" id="bundles">
       <button class="bundle" data-qty="1" data-total="135">
-        <div class="count">1×</div>
+        <div class="count">1x</div>
         <div class="price">$135</div>
         <div class="per">per adapter</div>
         <div class="save">&nbsp;</div>
       </button>
       <button class="bundle" data-qty="2" data-total="250">
-        <div class="count">2×</div>
+        <div class="count">2x</div>
         <div class="price">$125</div>
         <div class="per">per adapter · $250 total</div>
         <div class="save">save $20</div>
       </button>
       <button class="bundle" data-qty="4" data-total="480">
-        <div class="count">4×</div>
+        <div class="count">4x</div>
         <div class="price">$120</div>
         <div class="per">per adapter · $480 total</div>
         <div class="save">save $60</div>
@@ -570,7 +573,7 @@
     </div>
 
     <p class="fineprint">
-      <strong>Not included above:</strong> shipping, and any VAT, customs duty, or import tariff your country charges on arrival. Those extra charges are added on top and vary by destination - PCBWay Bazaar calculates and shows them at checkout when applicable, once this is real.
+      <strong>Not included above:</strong> shipping, any VAT, customs duty, or import tariff your country charges on arrival. Those extra charges are added on top and vary by destination - PCBWay Bazaar calculates and shows them at checkout when applicable, once this is real.
     </p>
   </section>
 
@@ -582,7 +585,7 @@
       <div id="summaryView">
         <div class="summary-row">
           <span class="label">Bundle</span>
-          <span class="value" id="sumBundle">1 × HAWK 370</span>
+          <span class="value" id="sumBundle">1x HAWK 370</span>
         </div>
         <div class="summary-row">
           <span class="label">Price per adapter</span>
@@ -617,6 +620,7 @@
               <button class="opt" data-value="Good - can't wait to get the HAWK 370">Good - can't wait to get the HAWK 370</button>
               <button class="opt" data-value="Fine, but I hesitated">Fine, but I hesitated</button>
               <button class="opt" data-value="Regret - I'll probably change my mind">Regret - I'll probably change my mind</button>
+              <button class="opt" data-value="Too risky to buy from you">I want just the PCB for self-assembly (65-75 USD)</button>
             </div>
           </div>
 
@@ -626,6 +630,7 @@
               <button class="opt" data-value="Unknown final price (shipping, taxes, customs)">Unknown final price (shipping, taxes, customs)</button>
               <button class="opt" data-value="Way too expensive for a hobby product">Way too expensive for a hobby product</button>
               <button class="opt" data-value="Too risky to buy from you">Too risky to buy from you</button>
+              <button class="opt" data-value="Too risky to buy from you">I want just the PCB for self-assembly (65-75 USD)</button>
             </div>
           </div>
 
@@ -688,7 +693,7 @@
   let selected = { qty: 1, total: 135, per: 135 };
 
   function renderSummary() {
-    sumBundle.textContent = selected.qty + ' × HAWK 370';
+    sumBundle.textContent = selected.qty + 'x HAWK 370';
     sumPer.textContent = '$' + selected.per.toFixed(2);
     sumTotal.textContent = '$' + selected.total.toFixed(2);
   }
